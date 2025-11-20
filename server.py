@@ -5,6 +5,7 @@ import logging
 import numpy as np
 from typing import Dict, List, Tuple, Optional
 from collections import OrderedDict
+from dotenv import load_dotenv
 
 import flwr as fl
 from flwr.common import Metrics, Parameters, FitRes, EvaluateRes, parameters_to_ndarrays, NDArrays
@@ -13,6 +14,8 @@ from flwr.server import ServerConfig
 from flwr.server.strategy import FedAvg
 from model import NeuralNetwork  # Import the NeuralNetwork model
 
+load_dotenv()
+tailscale_ip = os.getenv("FL_TAILSCALE_IP",)
 # Server Configuration
 NUM_ROUNDS = 4
 MIN_CLIENTS = 2
@@ -143,7 +146,8 @@ def main():
     config = ServerConfig(num_rounds=NUM_ROUNDS)
     
     # Start server
-    server_address = "0.0.0.0:8080"
+    server_address = tailscale_ip if tailscale_ip else "0.0.0.0:8080"
+    print(server_address)
     logger.info(f"Starting federated learning server at {server_address}")
     logger.info(f"Configuration: {NUM_ROUNDS} rounds, {MIN_CLIENTS} minimum clients")
     logger.info(f"Model: NeuralNetwork with {INPUT_SIZE} inputs, {NUM_CLASSES} classes")

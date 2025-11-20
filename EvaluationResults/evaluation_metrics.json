@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "timestamp": "2025-12-09T01:41:43.943434",
+        "model_path": "c:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\SavedGlobalModel\\final_model.pth",
+        "device": "cpu",
+        "test_samples": 117600
+    },
+    "overall_metrics": {
+        "accuracy": 71.14115646258503,
+        "mean_roc_auc": 0.5975968168230812,
+        "cohen_kappa": 0.6749556498807296,
+        "matthews_corr_coef": 0.6834611665437519,
+        "macro_precision": 69.83598234684285,
+        "macro_recall": 70.18796296296297,
+        "macro_f1": 67.08684878043417,
+        "weighted_precision": 71.12174115429309,
+        "weighted_recall": 71.14115646258503,
+        "weighted_f1": 68.15658750497157
+    },
+    "per_class_metrics": [
+        {
+            "class": "benign",
+            "precision": 96.8144698656948,
+            "recall": 99.61805555555556,
+            "f1_score": 98.19625560461375,
+            "roc_auc": 0.9994647434862187,
+            "support": 14400
+        },
+        {
+            "class": "gafgyt.combo",
+            "precision": 56.52478542651953,
+            "recall": 89.63888888888889,
+            "f1_score": 69.33075518315609,
+            "roc_auc": 0.9505869754656547,
+            "support": 14400
+        },
+        {
+            "class": "gafgyt.junk",
+            "precision": 89.76531942633638,
+            "recall": 38.25,
+            "f1_score": 53.64238410596026,
+            "roc_auc": 0.9593882664459517,
+            "support": 14400
+        },
+        {
+            "class": "gafgyt.tcp",
+            "precision": 99.24153623388264,
+            "recall": 99.95138888888889,
+            "f1_score": 99.59519773033941,
+            "roc_auc": 0.9997555326765719,
+            "support": 14400
+        },
+        {
+            "class": "mirai.ack",
+            "precision": 25.293841090738127,
+            "recall": 4.483333333333333,
+            "f1_score": 7.616620655482409,
+            "roc_auc": 0.330690361032197,
+            "support": 12000
+        },
+        {
+            "class": "mirai.scan",
+            "precision": 82.00298953662183,
+            "recall": 91.43333333333334,
+            "f1_score": 86.46178092986604,
+            "roc_auc": 0.09220732757260101,
+            "support": 12000
+        },
+        {
+            "class": "mirai.syn",
+            "precision": 77.40206587409861,
+            "recall": 66.19166666666668,
+            "f1_score": 71.35926691222711,
+            "roc_auc": 0.4787369231376263,
+            "support": 12000
+        },
+        {
+            "class": "mirai.udp",
+            "precision": 50.07896625987078,
+            "recall": 58.13333333333334,
+            "f1_score": 53.80640185113768,
+            "roc_auc": 0.24170493095012624,
+            "support": 12000
+        },
+        {
+            "class": "mirai.udpplain",
+            "precision": 51.39986740782294,
+            "recall": 83.99166666666666,
+            "f1_score": 63.77297605112467,
+            "roc_auc": 0.3258362906407829,
+            "support": 12000
+        }
+    ]
+}

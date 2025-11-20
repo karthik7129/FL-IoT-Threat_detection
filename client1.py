@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import pandas as pd
 import numpy as np
+import os
 from torch.utils.data import DataLoader, TensorDataset
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -152,7 +153,18 @@ class FlowerClient(NumPyClient):
         return loss, len(test_loader.dataset), {"accuracy": accuracy}
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description='Federated Learning Client 1')
+    parser.add_argument(
+        '--server',
+        type=str,
+        default=os.getenv('FL_SERVER_ADDRESS', 'localhost:8080'),
+        help='Server address in format host:port (default: localhost:8080)'
+    )
+    args = parser.parse_args()
+    
+    print(f"Client 1 connecting to server: {args.server}")
     start_client(
-        server_address="localhost:8080",
+        server_address=args.server,
         client=FlowerClient(),
     )
