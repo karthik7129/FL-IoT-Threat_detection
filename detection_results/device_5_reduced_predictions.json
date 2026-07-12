@@ -1,0 +1,1110 @@
+{
+  "file": "C:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\ReducedData\\device_5_reduced.csv",
+  "total_samples": 1000,
+  "correct_predictions": 162,
+  "overall_accuracy": 16.2,
+  "class_statistics": {
+    "0": {
+      "attack_name": "Benign",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "9": 34,
+        "1": 65,
+        "8": 1
+      }
+    },
+    "1": {
+      "attack_name": "Gafgyt Combo",
+      "total_samples": 100,
+      "correct_predictions": 2,
+      "accuracy": 2.0,
+      "prediction_distribution": {
+        "8": 98,
+        "1": 2
+      }
+    },
+    "2": {
+      "attack_name": "Gafgyt Junk",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "1": 3,
+        "8": 97
+      }
+    },
+    "3": {
+      "attack_name": "Gafgyt TCP",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 100
+      }
+    },
+    "4": {
+      "attack_name": "Gafgyt UDP",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 100
+      }
+    },
+    "5": {
+      "attack_name": "Mirai ACK",
+      "total_samples": 100,
+      "correct_predictions": 34,
+      "accuracy": 34.0,
+      "prediction_distribution": {
+        "5": 34,
+        "9": 66
+      }
+    },
+    "6": {
+      "attack_name": "Mirai Scan",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 100
+      }
+    },
+    "7": {
+      "attack_name": "Mirai SYN",
+      "total_samples": 100,
+      "correct_predictions": 24,
+      "accuracy": 24.0,
+      "prediction_distribution": {
+        "8": 71,
+        "7": 24,
+        "1": 5
+      }
+    },
+    "8": {
+      "attack_name": "Mirai UDP",
+      "total_samples": 100,
+      "correct_predictions": 4,
+      "accuracy": 4.0,
+      "prediction_distribution": {
+        "5": 56,
+        "9": 40,
+        "8": 4
+      }
+    },
+    "9": {
+      "attack_name": "Mirai UDPPlain",
+      "total_samples": 100,
+      "correct_predictions": 98,
+      "accuracy": 98.0,
+      "prediction_distribution": {
+        "9": 98,
+        "5": 2
+      }
+    }
+  },
+  "predictions": [
+    {
+      "sample_id": 0,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.961444616317749,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 1,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8982797861099243,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 2,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8728500008583069,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 3,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.8811212182044983,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 4,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8900256156921387,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 5,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.963058352470398,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 6,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9932392835617065,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 7,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8780161142349243,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 8,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9301351308822632,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 9,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9311737418174744,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 10,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8953972458839417,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 11,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.882706344127655,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 12,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8568972945213318,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 13,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9664815068244934,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 14,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8808445930480957,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 15,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.8932240009307861,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 16,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.7782721519470215,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 17,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8635459542274475,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 18,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.79458087682724,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 19,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.7323007583618164,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 20,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8597183227539062,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 21,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8508344292640686,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 22,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 8,
+      "predicted_attack": "Mirai UDP",
+      "confidence": 0.985069990158081,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 23,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8720839619636536,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 24,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.5647925138473511,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 25,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8837226033210754,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 26,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.7630716562271118,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 27,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8579062223434448,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 28,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8568997383117676,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 29,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9350550770759583,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 30,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8315272331237793,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 31,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9632608294487,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 32,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8450750708580017,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 33,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9958005547523499,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 34,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8524038195610046,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 35,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.8537070155143738,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 36,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8878082633018494,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 37,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8954797387123108,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 38,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8732278943061829,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 39,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8890811800956726,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 40,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8565401434898376,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 41,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.7710520029067993,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 42,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8514493703842163,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 43,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8861123919487,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 44,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8438380360603333,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 45,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8858212828636169,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 46,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.23681743443012238,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 47,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.836708128452301,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 48,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9676987528800964,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 49,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9367192983627319,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 50,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.9072180390357971,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 51,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8943365812301636,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 52,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9579521417617798,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 53,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8441410064697266,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 54,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8453261256217957,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 55,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9897282719612122,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 56,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.878250241279602,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 57,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9665061235427856,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 58,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9606267809867859,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 59,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8746453523635864,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 60,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8660930395126343,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 61,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9650850296020508,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 62,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.4537915885448456,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 63,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8805153369903564,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 64,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8449804186820984,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 65,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8631450533866882,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 66,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8592555522918701,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 67,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8741677403450012,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 68,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.858791708946228,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 69,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8833746910095215,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 70,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9880353808403015,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 71,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9564600586891174,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 72,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8732501864433289,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 73,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9970781803131104,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 74,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.9154576659202576,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 75,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.7680763006210327,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 76,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8420903086662292,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 77,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.5042539834976196,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 78,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8698383569717407,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 79,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.85895174741745,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 80,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8796650171279907,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 81,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8831365704536438,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 82,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8590907454490662,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 83,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9952822327613831,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 84,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8291206955909729,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 85,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9963666200637817,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 86,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8832540512084961,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 87,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8882508277893066,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 88,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.5055512189865112,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 89,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9947947859764099,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 90,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.838016927242279,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 91,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8339172005653381,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 92,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.8129072189331055,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 93,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9930528998374939,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 94,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.4261259436607361,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 95,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.4337739944458008,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 96,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.6794189214706421,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 97,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9612207412719727,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 98,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9885093569755554,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 99,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9177384972572327,
+      "is_correct": false,
+      "is_malicious": true
+    }
+  ]
+}

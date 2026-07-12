@@ -1,6 +1,5 @@
 fdata/
 data/
 .idea/
-ReducedData/
 samplePackets/pcaps
 .env

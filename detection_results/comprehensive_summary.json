@@ -1,0 +1,112 @@
+{
+  "total_samples": 5500,
+  "total_correct": 623,
+  "overall_accuracy": 11.327272727272728,
+  "per_class_accuracy": {
+    "0": {
+      "attack_name": "Benign",
+      "total_samples": 600,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "1": 314,
+        "9": 233,
+        "7": 1,
+        "8": 3,
+        "5": 49
+      }
+    },
+    "1": {
+      "attack_name": "Gafgyt Combo",
+      "total_samples": 600,
+      "correct_predictions": 8,
+      "accuracy": 1.3333333333333335,
+      "prediction_distribution": {
+        "8": 592,
+        "1": 8
+      }
+    },
+    "2": {
+      "attack_name": "Gafgyt Junk",
+      "total_samples": 600,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "8": 591,
+        "1": 9
+      }
+    },
+    "3": {
+      "attack_name": "Gafgyt TCP",
+      "total_samples": 600,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 600
+      }
+    },
+    "4": {
+      "attack_name": "Gafgyt UDP",
+      "total_samples": 600,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 600
+      }
+    },
+    "5": {
+      "attack_name": "Mirai ACK",
+      "total_samples": 500,
+      "correct_predictions": 112,
+      "accuracy": 22.400000000000002,
+      "prediction_distribution": {
+        "8": 299,
+        "5": 112,
+        "9": 89
+      }
+    },
+    "6": {
+      "attack_name": "Mirai Scan",
+      "total_samples": 500,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 471,
+        "8": 29
+      }
+    },
+    "7": {
+      "attack_name": "Mirai SYN",
+      "total_samples": 500,
+      "correct_predictions": 56,
+      "accuracy": 11.200000000000001,
+      "prediction_distribution": {
+        "8": 439,
+        "7": 56,
+        "1": 5
+      }
+    },
+    "8": {
+      "attack_name": "Mirai UDP",
+      "total_samples": 500,
+      "correct_predictions": 305,
+      "accuracy": 61.0,
+      "prediction_distribution": {
+        "8": 305,
+        "5": 150,
+        "9": 45
+      }
+    },
+    "9": {
+      "attack_name": "Mirai UDPPlain",
+      "total_samples": 500,
+      "correct_predictions": 142,
+      "accuracy": 28.4,
+      "prediction_distribution": {
+        "8": 214,
+        "5": 144,
+        "9": 142
+      }
+    }
+  }
+}

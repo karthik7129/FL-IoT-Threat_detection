@@ -1,29 +1,40 @@
 {
-  "generation_time": "2025-11-06T09:31:59.196399",
-  "files_processed": {
-    "total": 0,
-    "successful": 0,
-    "failed": 0,
-    "success_rate": 0
-  },
-  "flow_analysis": {
-    "total_flows": 0,
-    "malicious_flows": 0,
-    "benign_flows": 0,
-    "malicious_percentage": 0
-  },
-  "attack_distribution": {},
-  "threat_level_distribution": {
-    "None": 0,
-    "Low": 0,
-    "Medium": 0,
-    "High": 0,
-    "Uncertain": 0
-  },
-  "performance": {
-    "average_processing_time": 0,
-    "total_processing_time": 0,
-    "fastest_processing": 0,
-    "slowest_processing": 0
-  }
+  "generation_time": "2025-12-16T12:04:57.868707",
+  "files_processed": 6,
+  "total_samples": 5500,
+  "total_correct": 623,
+  "overall_accuracy": 11.327272727272728,
+  "per_class_accuracy": {},
+  "file_summaries": [
+    {
+      "file": "C:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\ReducedData\\device_1_reduced.csv",
+      "samples": 1000,
+      "accuracy": 10.5
+    },
+    {
+      "file": "C:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\ReducedData\\device_2_reduced.csv",
+      "samples": 1000,
+      "accuracy": 9.8
+    },
+    {
+      "file": "C:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\ReducedData\\device_4_reduced.csv",
+      "samples": 1000,
+      "accuracy": 10.0
+    },
+    {
+      "file": "C:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\ReducedData\\device_5_reduced.csv",
+      "samples": 1000,
+      "accuracy": 16.2
+    },
+    {
+      "file": "C:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\ReducedData\\device_6_reduced.csv",
+      "samples": 1000,
+      "accuracy": 15.7
+    },
+    {
+      "file": "C:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\ReducedData\\device_7_reduced.csv",
+      "samples": 500,
+      "accuracy": 0.2
+    }
+  ]
 }

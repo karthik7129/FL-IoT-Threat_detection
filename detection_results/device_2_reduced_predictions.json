@@ -1,0 +1,1108 @@
+{
+  "file": "C:\\Users\\karthik cse\\PycharmProjects\\MegaProject\\ReducedData\\device_2_reduced.csv",
+  "total_samples": 1000,
+  "correct_predictions": 98,
+  "overall_accuracy": 9.8,
+  "class_statistics": {
+    "0": {
+      "attack_name": "Benign",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "1": 6,
+        "9": 92,
+        "7": 1,
+        "8": 1
+      }
+    },
+    "1": {
+      "attack_name": "Gafgyt Combo",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "8": 100
+      }
+    },
+    "2": {
+      "attack_name": "Gafgyt Junk",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "8": 99,
+        "1": 1
+      }
+    },
+    "3": {
+      "attack_name": "Gafgyt TCP",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 100
+      }
+    },
+    "4": {
+      "attack_name": "Gafgyt UDP",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 100
+      }
+    },
+    "5": {
+      "attack_name": "Mirai ACK",
+      "total_samples": 100,
+      "correct_predictions": 1,
+      "accuracy": 1.0,
+      "prediction_distribution": {
+        "8": 99,
+        "5": 1
+      }
+    },
+    "6": {
+      "attack_name": "Mirai Scan",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "7": 99,
+        "8": 1
+      }
+    },
+    "7": {
+      "attack_name": "Mirai SYN",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "8": 100
+      }
+    },
+    "8": {
+      "attack_name": "Mirai UDP",
+      "total_samples": 100,
+      "correct_predictions": 97,
+      "accuracy": 97.0,
+      "prediction_distribution": {
+        "8": 97,
+        "5": 3
+      }
+    },
+    "9": {
+      "attack_name": "Mirai UDPPlain",
+      "total_samples": 100,
+      "correct_predictions": 0,
+      "accuracy": 0.0,
+      "prediction_distribution": {
+        "5": 35,
+        "8": 65
+      }
+    }
+  },
+  "predictions": [
+    {
+      "sample_id": 0,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8549885153770447,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 1,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9971991777420044,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 2,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9976517558097839,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 3,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.986173152923584,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 4,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9905258417129517,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 5,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9866564273834229,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 6,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9855386018753052,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 7,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9827760457992554,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 8,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9919799566268921,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 9,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9975520968437195,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 10,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9978110194206238,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 11,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9976054430007935,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 12,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9971312284469604,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 13,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9899346232414246,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 14,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9932208061218262,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 15,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9972526431083679,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 16,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9868733286857605,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 17,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9896412491798401,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 18,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9863216280937195,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 19,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9890105128288269,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 20,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9852091670036316,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 21,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9983975291252136,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 22,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9896456003189087,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 23,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9907810091972351,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 24,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9962479472160339,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 25,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.989463210105896,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 26,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9876765012741089,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 27,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9864365458488464,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 28,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9883574843406677,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 29,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.996535062789917,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 30,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9958587288856506,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 31,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.990319013595581,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 32,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9889013767242432,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 33,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9899555444717407,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 34,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9864186644554138,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 35,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9884628653526306,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 36,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9863665699958801,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 37,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9852124452590942,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 38,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 7,
+      "predicted_attack": "Mirai SYN",
+      "confidence": 0.998386025428772,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 39,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9876477718353271,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 40,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9929513335227966,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 41,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9977856874465942,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 42,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9980806112289429,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 43,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9899789094924927,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 44,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9921422004699707,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 45,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9885818362236023,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 46,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9977318644523621,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 47,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9868659377098083,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 48,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9902917742729187,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 49,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9836634397506714,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 50,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9872303605079651,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 51,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9885433912277222,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 52,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9880205988883972,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 53,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9886214137077332,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 54,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8549950122833252,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 55,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9968279004096985,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 56,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9914538860321045,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 57,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9925282001495361,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 58,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.854993999004364,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 59,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9866581559181213,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 60,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9878531694412231,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 61,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9860257506370544,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 62,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8576069474220276,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 63,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9869122505187988,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 64,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9956337809562683,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 65,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9896127581596375,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 66,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9913156032562256,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 67,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9905470013618469,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 68,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9975764155387878,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 69,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9879887104034424,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 70,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.986249566078186,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 71,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9891553521156311,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 72,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.997596800327301,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 73,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9974877834320068,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 74,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9985195994377136,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 75,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9994049072265625,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 76,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9883225560188293,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 77,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9861899018287659,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 78,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8549920320510864,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 79,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.990104615688324,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 80,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 8,
+      "predicted_attack": "Mirai UDP",
+      "confidence": 0.9999983310699463,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 81,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.991461992263794,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 82,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9870022535324097,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 83,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9929567575454712,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 84,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 1,
+      "predicted_attack": "Gafgyt Combo",
+      "confidence": 0.8549858927726746,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 85,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9978207349777222,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 86,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9891603589057922,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 87,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9874343276023865,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 88,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9893515706062317,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 89,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9929474592208862,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 90,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9882302284240723,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 91,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.987509548664093,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 92,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9910752773284912,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 93,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9908096790313721,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 94,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9900231957435608,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 95,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9872289896011353,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 96,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9861307740211487,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 97,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9983147382736206,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 98,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9900244474411011,
+      "is_correct": false,
+      "is_malicious": true
+    },
+    {
+      "sample_id": 99,
+      "true_label": 0,
+      "true_attack": "Benign",
+      "predicted_label": 9,
+      "predicted_attack": "Mirai UDPPlain",
+      "confidence": 0.9900210499763489,
+      "is_correct": false,
+      "is_malicious": true
+    }
+  ]
+}

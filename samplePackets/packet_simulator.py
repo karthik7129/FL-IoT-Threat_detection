@@ -103,47 +103,65 @@ class EnhancedIoTTrafficSimulator:
         packets = []
         logger.info(f"Generating {num_packets} benign packets")
         
-        for i in range(num_packets):
+        current_time = time.time()
+        num_flows = num_packets // 10  # Create flows with ~10 packets each
+        
+        for flow_idx in range(num_flows):
             device_type = random.choice(list(self.device_profiles.keys()))
             profile = self.device_profiles[device_type]
             
+            # Create flow 5-tuple
             src_ip = self.generate_iot_ip()
             dst_ip = self.generate_external_ip() if random.random() < 0.7 else self.generate_iot_ip()
-            
             protocol = random.choice(profile['protocols'])
             src_port = random.randint(1024, 65535)
             dst_port = random.choice(profile['ports'])
             
-            if protocol == 'TCP':
-                # Normal TCP communication
-                packet = Ether(src=self.generate_mac_address()) / IP(src=src_ip, dst=dst_ip, ttl=random.randint(32, 128)) / TCP(
-                    sport=src_port,
-                    dport=dst_port,
-                    flags=random.choice(["PA", "A", "S", "SA", "FA"]),
-                    seq=random.randint(1, 4294967295),
-                    ack=random.randint(1, 4294967295),
-                    window=random.randint(1024, 65535)
-                )
-            else:  # UDP
-                packet = Ether(src=self.generate_mac_address()) / IP(src=src_ip, dst=dst_ip, ttl=random.randint(32, 128)) / UDP(
-                    sport=src_port,
-                    dport=dst_port
-                )
+            # Generate multiple packets for this flow
+            packets_in_flow = random.randint(5, 15)
+            for pkt_idx in range(packets_in_flow):
+                if protocol == 'TCP':
+                    flags = random.choice(["PA", "A", "S", "SA", "FA"])
+                    packet = Ether(src=self.generate_mac_address()) / IP(src=src_ip, dst=dst_ip, ttl=random.randint(32, 128)) / TCP(
+                        sport=src_port,
+                        dport=dst_port,
+                        flags=flags,
+                        seq=random.randint(1, 4294967295),
+                        ack=random.randint(1, 4294967295),
+                        window=random.randint(1024, 65535)
+                    )
+                else:  # UDP
+                    packet = Ether(src=self.generate_mac_address()) / IP(src=src_ip, dst=dst_ip, ttl=random.randint(32, 128)) / UDP(
+                        sport=src_port,
+                        dport=dst_port
+                    )
+                
+                payload_size = random.randint(*profile['packet_sizes'])
+                if payload_size > 60:
+                    payload = self._generate_benign_payload(dst_port, payload_size - 60)
+                    packet = packet / Raw(load=payload)
+                
+                # Benign traffic has variable inter-arrival times
+                inter_arrival = random.uniform(0.001, 0.5)
+                current_time += inter_arrival
+                packet.time = current_time
+                
+                packets.append(packet)
+                
+                if len(packets) >= num_packets:
+                    break
             
-            # Add realistic payload
-            payload_size = random.randint(*profile['packet_sizes'])
-            if payload_size > 60:
-                payload = self._generate_benign_payload(dst_port, payload_size - 60)
-                packet = packet / Raw(load=payload)
-            
-            packets.append(packet)
+            if len(packets) >= num_packets:
+                break
         
-        return packets
+        return packets[:num_packets]
 
     def create_gafgyt_combo(self, num_packets: int = 500) -> List[Packet]:
         """Generate Gafgyt Combo attack (Attack Type 1)"""
         packets = []
         logger.info(f"Generating {num_packets} Gafgyt Combo attack packets")
+        
+        current_time = time.time()
         
         for i in range(num_packets):
             src_ip = self.generate_iot_ip()
@@ -171,6 +189,10 @@ class EnhancedIoTTrafficSimulator:
                     flags="PA"
                 ) / Raw(load=b"GET / HTTP/1.1\r\nHost: target\r\nUser-Agent: Gafgyt\r\n\r\n")
             
+            inter_arrival = random.uniform(0.0001, 0.01)  # Fast attack
+            current_time += inter_arrival
+            packet.time = current_time
+            
             packets.append(packet)
         
         return packets
@@ -179,6 +201,8 @@ class EnhancedIoTTrafficSimulator:
         """Generate Gafgyt Junk attack (Attack Type 2)"""
         packets = []
         logger.info(f"Generating {num_packets} Gafgyt Junk attack packets")
+        
+        current_time = time.time()
         
         for i in range(num_packets):
             src_ip = self.generate_iot_ip()
@@ -195,6 +219,10 @@ class EnhancedIoTTrafficSimulator:
             junk_data = bytes([random.randint(0, 255) for _ in range(junk_size)])
             packet = packet / Raw(load=junk_data)
             
+            inter_arrival = random.uniform(0.00001, 0.001)
+            current_time += inter_arrival
+            packet.time = current_time
+            
             packets.append(packet)
         
         return packets
@@ -203,6 +231,8 @@ class EnhancedIoTTrafficSimulator:
         """Generate Gafgyt TCP attack (Attack Type 3)"""
         packets = []
         logger.info(f"Generating {num_packets} Gafgyt TCP attack packets")
+        
+        current_time = time.time()
         
         for i in range(num_packets):
             src_ip = self.generate_iot_ip()
@@ -236,6 +266,10 @@ class EnhancedIoTTrafficSimulator:
             if attack_type == 'push_flood':
                 packet = packet / Raw(load=b"X" * random.randint(10, 100))
             
+            inter_arrival = random.uniform(0.0001, 0.005)
+            current_time += inter_arrival
+            packet.time = current_time
+            
             packets.append(packet)
         
         return packets
@@ -244,6 +278,8 @@ class EnhancedIoTTrafficSimulator:
         """Generate Mirai ACK attack (Attack Type 5)"""
         packets = []
         logger.info(f"Generating {num_packets} Mirai ACK attack packets")
+        
+        current_time = time.time()
         
         for i in range(num_packets):
             src_ip = self.generate_iot_ip()
@@ -263,6 +299,10 @@ class EnhancedIoTTrafficSimulator:
             if random.random() < 0.3:
                 packet = packet / Raw(load=b"ACKFLOOD" * random.randint(1, 8))
             
+            inter_arrival = random.uniform(0.00001, 0.0001)
+            current_time += inter_arrival
+            packet.time = current_time
+            
             packets.append(packet)
         
         return packets
@@ -272,8 +312,8 @@ class EnhancedIoTTrafficSimulator:
         packets = []
         logger.info(f"Generating {num_packets} Mirai Scan attack packets")
         
-        # Mirai scanning targets
         scan_ports = [23, 2323, 80, 8080, 443, 8443, 7547, 5555, 9000]
+        current_time = time.time()
         
         for i in range(num_packets):
             src_ip = self.generate_iot_ip()
@@ -297,6 +337,10 @@ class EnhancedIoTTrafficSimulator:
                     ])
                     packet = packet / Raw(load=creds)
             
+            inter_arrival = random.uniform(0.0001, 0.002)
+            current_time += inter_arrival
+            packet.time = current_time
+            
             packets.append(packet)
         
         return packets
@@ -305,6 +349,8 @@ class EnhancedIoTTrafficSimulator:
         """Generate Mirai SYN attack (Attack Type 7)"""
         packets = []
         logger.info(f"Generating {num_packets} Mirai SYN attack packets")
+        
+        current_time = time.time()
         
         for i in range(num_packets):
             src_ip = self.generate_iot_ip()
@@ -323,6 +369,10 @@ class EnhancedIoTTrafficSimulator:
             if random.random() < 0.5:
                 packet[TCP].options = [('MSS', random.choice([536, 1460, 1440]))]
             
+            inter_arrival = random.uniform(0.00001, 0.0001)
+            current_time += inter_arrival
+            packet.time = current_time
+            
             packets.append(packet)
         
         return packets
@@ -331,6 +381,8 @@ class EnhancedIoTTrafficSimulator:
         """Generate Mirai UDP attack (Attack Type 8)"""
         packets = []
         logger.info(f"Generating {num_packets} Mirai UDP attack packets")
+        
+        current_time = time.time()
         
         for i in range(num_packets):
             src_ip = self.generate_iot_ip()
@@ -359,6 +411,11 @@ class EnhancedIoTTrafficSimulator:
                 payload = b'MIRAI_UDP_FLOOD_' + bytes([random.randint(65, 90) for _ in range(random.randint(50, 500))])
             
             packet = packet / Raw(load=payload)
+            
+            inter_arrival = random.uniform(0.00001, 0.0001)
+            current_time += inter_arrival
+            packet.time = current_time
+            
             packets.append(packet)
         
         return packets
@@ -367,6 +424,8 @@ class EnhancedIoTTrafficSimulator:
         """Generate Mirai UDP Plain attack (Attack Type 9)"""
         packets = []
         logger.info(f"Generating {num_packets} Mirai UDP Plain attack packets")
+        
+        current_time = time.time()
         
         for i in range(num_packets):
             src_ip = self.generate_iot_ip()
@@ -389,6 +448,11 @@ class EnhancedIoTTrafficSimulator:
             
             payload = random.choice(patterns)
             packet = packet / Raw(load=payload)
+            
+            inter_arrival = random.uniform(0.00001, 0.0001)
+            current_time += inter_arrival
+            packet.time = current_time
+            
             packets.append(packet)
         
         return packets

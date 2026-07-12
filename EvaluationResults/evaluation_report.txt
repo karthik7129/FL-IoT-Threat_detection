@@ -2,7 +2,7 @@
 FEDERATED LEARNING MODEL - EVALUATION REPORT
 ================================================================================
 
-Generated: 2025-12-09 01:41:43
+Generated: 2025-12-09 01:55:54
 Model: final_model.pth
 Device: cpu
 
@@ -39,8 +39,8 @@ mirai.udpplain        51.40%      83.99%      63.77%     0.3258      12000
 CONFUSION MATRIX (Counts)
 ================================================================================
 
-Predicted →
-True ↓         benign    gafgyt.c  gafgyt.j  gafgyt.t  mirai.ac  mirai.sc  mirai.sy  mirai.ud  mirai.ud
+Predicted -->
+True v         benign    gafgyt.c  gafgyt.j  gafgyt.t  mirai.ac  mirai.sc  mirai.sy  mirai.ud  mirai.ud
 --------------------------------------------------------------------------------
 benign            14345         0         0        55         0         0         0         0         0
 gafgyt.combo         29     12908       118         0         0         0      1345         0         0

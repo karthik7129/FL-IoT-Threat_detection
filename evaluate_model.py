@@ -89,9 +89,9 @@ class ComprehensiveModelEvaluator:
         self.model.to(self.device)
         self.model.eval()
         
-        print(f"✓ Model loaded: {os.path.basename(self.model_path)}")
-        print(f"✓ Architecture: {input_size} inputs → 10 classes")
-        print(f"✓ Parameters: {sum(p.numel() for p in self.model.parameters()):,}")
+        print(f"[OK] Model loaded: {os.path.basename(self.model_path)}")
+        print(f"[OK] Architecture: {input_size} inputs -> 10 classes")
+        print(f"[OK] Parameters: {sum(p.numel() for p in self.model.parameters()):,}")
         
     def load_test_data(self, test_size=0.2, random_state=42):
         """
@@ -128,7 +128,7 @@ class ComprehensiveModelEvaluator:
             all_X.append(X)
             all_y.append(y)
             
-            print(f"  ✓ {device_file}: {len(y)} samples")
+            print(f"  [OK] {device_file}: {len(y)} samples")
         
         # Combine all data
         X_combined = np.vstack(all_X)
@@ -205,7 +205,7 @@ class ComprehensiveModelEvaluator:
                 if (batch_idx + 1) % 10 == 0:
                     print(f"  Processed {batch_idx + 1}/{len(test_loader)} batches", end='\r')
         
-        print(f"\n✓ Evaluation complete: {total:,} samples processed")
+        print(f"\n[OK] Evaluation complete: {total:,} samples processed")
         
         # Store results
         self.all_predictions = np.array(all_preds)
@@ -214,7 +214,7 @@ class ComprehensiveModelEvaluator:
         
         # Calculate overall accuracy
         overall_accuracy = 100 * correct / total
-        print(f"✓ Overall Accuracy: {overall_accuracy:.2f}%")
+        print(f"[OK] Overall Accuracy: {overall_accuracy:.2f}%")
         
         return overall_accuracy
     
@@ -226,41 +226,26 @@ class ComprehensiveModelEvaluator:
         
         cm = confusion_matrix(self.all_labels, self.all_predictions)
         
-        # Normalize for percentage view
-        cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis] * 100
+        # Create single plot with absolute counts
+        fig, ax = plt.subplots(figsize=(12, 10))
         
-        # Create figure with two subplots
-        fig, axes = plt.subplots(1, 2, figsize=(20, 8))
-        
-        # Plot 1: Absolute counts
         sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
                     xticklabels=self.class_names, 
                     yticklabels=self.class_names,
-                    ax=axes[0], cbar_kws={'label': 'Count'})
-        axes[0].set_title('Confusion Matrix (Counts)', fontsize=14, fontweight='bold')
-        axes[0].set_ylabel('True Label', fontsize=12)
-        axes[0].set_xlabel('Predicted Label', fontsize=12)
-        axes[0].tick_params(axis='x', rotation=45)
-        axes[0].tick_params(axis='y', rotation=0)
-        
-        # Plot 2: Normalized percentages
-        sns.heatmap(cm_normalized, annot=True, fmt='.1f', cmap='RdYlGn', 
-                    xticklabels=self.class_names, 
-                    yticklabels=self.class_names,
-                    ax=axes[1], cbar_kws={'label': 'Percentage (%)'})
-        axes[1].set_title('Confusion Matrix (Normalized %)', fontsize=14, fontweight='bold')
-        axes[1].set_ylabel('True Label', fontsize=12)
-        axes[1].set_xlabel('Predicted Label', fontsize=12)
-        axes[1].tick_params(axis='x', rotation=45)
-        axes[1].tick_params(axis='y', rotation=0)
+                    ax=ax, cbar_kws={'label': 'Count'})
+        ax.set_title('Confusion Matrix', fontsize=16, fontweight='bold')
+        ax.set_ylabel('True Label', fontsize=14)
+        ax.set_xlabel('Predicted Label', fontsize=14)
+        ax.tick_params(axis='x', rotation=45)
+        ax.tick_params(axis='y', rotation=0)
         
         plt.tight_layout()
         save_path = os.path.join(self.results_dir, 'confusion_matrix.png')
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✓ Saved: {save_path}")
+        print(f"[OK] Saved: {save_path}")
         plt.close()
         
-        return cm, cm_normalized
+        return cm
     
     def plot_class_metrics(self):
         """Plot per-class precision, recall, and F1-score"""
@@ -282,72 +267,55 @@ class ComprehensiveModelEvaluator:
             'Support': support
         })
         
-        # Create figure
-        fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-        
         # Plot 1: Precision, Recall, F1-Score comparison
+        fig, ax = plt.subplots(figsize=(14, 8))
         x = np.arange(len(self.class_names))
         width = 0.25
         
-        axes[0, 0].bar(x - width, metrics_df['Precision'], width, label='Precision', alpha=0.8)
-        axes[0, 0].bar(x, metrics_df['Recall'], width, label='Recall', alpha=0.8)
-        axes[0, 0].bar(x + width, metrics_df['F1-Score'], width, label='F1-Score', alpha=0.8)
-        axes[0, 0].set_ylabel('Score (%)', fontsize=12)
-        axes[0, 0].set_title('Per-Class Metrics Comparison', fontsize=14, fontweight='bold')
-        axes[0, 0].set_xticks(x)
-        axes[0, 0].set_xticklabels(self.class_names, rotation=45, ha='right')
-        axes[0, 0].legend()
-        axes[0, 0].grid(axis='y', alpha=0.3)
-        axes[0, 0].set_ylim([0, 105])
-        
-        # Plot 2: F1-Score by class
-        colors = ['#2ecc71' if f1 >= 0.9 else '#f39c12' if f1 >= 0.7 else '#e74c3c' for f1 in f1]
-        axes[0, 1].barh(self.class_names, metrics_df['F1-Score'], color=colors, alpha=0.8)
-        axes[0, 1].set_xlabel('F1-Score (%)', fontsize=12)
-        axes[0, 1].set_title('F1-Score by Class', fontsize=14, fontweight='bold')
-        axes[0, 1].set_xlim([0, 105])
-        axes[0, 1].grid(axis='x', alpha=0.3)
-        
-        # Plot 3: Support (sample count) by class
-        axes[1, 0].bar(self.class_names, metrics_df['Support'], color='steelblue', alpha=0.8)
-        axes[1, 0].set_ylabel('Number of Samples', fontsize=12)
-        axes[1, 0].set_title('Test Set Distribution', fontsize=14, fontweight='bold')
-        axes[1, 0].tick_params(axis='x', rotation=45)
-        axes[1, 0].grid(axis='y', alpha=0.3)
-        
-        # Plot 4: Metrics summary table
-        axes[1, 1].axis('tight')
-        axes[1, 1].axis('off')
-        table_data = []
-        for idx, row in metrics_df.iterrows():
-            table_data.append([
-                row['Class'],
-                f"{row['Precision']:.1f}%",
-                f"{row['Recall']:.1f}%",
-                f"{row['F1-Score']:.1f}%",
-                f"{int(row['Support'])}"
-            ])
-        
-        table = axes[1, 1].table(
-            cellText=table_data,
-            colLabels=['Class', 'Precision', 'Recall', 'F1-Score', 'Support'],
-            cellLoc='center',
-            loc='center',
-            bbox=[0, 0, 1, 1]
-        )
-        table.auto_set_font_size(False)
-        table.set_fontsize(9)
-        table.scale(1, 2)
-        
-        # Style header
-        for i in range(5):
-            table[(0, i)].set_facecolor('#34495e')
-            table[(0, i)].set_text_props(weight='bold', color='white')
+        ax.bar(x - width, metrics_df['Precision'], width, label='Precision', alpha=0.8)
+        ax.bar(x, metrics_df['Recall'], width, label='Recall', alpha=0.8)
+        ax.bar(x + width, metrics_df['F1-Score'], width, label='F1-Score', alpha=0.8)
+        ax.set_ylabel('Score (%)', fontsize=14)
+        ax.set_title('Per-Class Metrics: Precision, Recall, F1-Score', fontsize=16, fontweight='bold')
+        ax.set_xticks(x)
+        ax.set_xticklabels(self.class_names, rotation=45, ha='right')
+        ax.legend(fontsize=12)
+        ax.grid(axis='y', alpha=0.3)
+        ax.set_ylim([0, 105])
         
         plt.tight_layout()
-        save_path = os.path.join(self.results_dir, 'class_metrics.png')
+        save_path = os.path.join(self.results_dir, 'precision_recall_f1.png')
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✓ Saved: {save_path}")
+        print(f"[OK] Saved: {save_path}")
+        plt.close()
+        
+        # Plot 2: F1-Score by class
+        fig, ax = plt.subplots(figsize=(10, 8))
+        colors = ['#2ecc71' if f1 >= 0.9 else '#f39c12' if f1 >= 0.7 else '#e74c3c' for f1 in f1]
+        ax.barh(self.class_names, metrics_df['F1-Score'], color=colors, alpha=0.8)
+        ax.set_xlabel('F1-Score (%)', fontsize=14)
+        ax.set_title('F1-Score by Class', fontsize=16, fontweight='bold')
+        ax.set_xlim([0, 105])
+        ax.grid(axis='x', alpha=0.3)
+        
+        plt.tight_layout()
+        save_path = os.path.join(self.results_dir, 'f1_scores.png')
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        print(f"[OK] Saved: {save_path}")
+        plt.close()
+        
+        # Plot 3: Support (sample count) by class
+        fig, ax = plt.subplots(figsize=(12, 7))
+        ax.bar(self.class_names, metrics_df['Support'], color='steelblue', alpha=0.8)
+        ax.set_ylabel('Number of Samples', fontsize=14)
+        ax.set_title('Test Set Distribution by Class', fontsize=16, fontweight='bold')
+        ax.tick_params(axis='x', rotation=45)
+        ax.grid(axis='y', alpha=0.3)
+        
+        plt.tight_layout()
+        save_path = os.path.join(self.results_dir, 'class_distribution.png')
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        print(f"[OK] Saved: {save_path}")
         plt.close()
         
         return metrics_df
@@ -390,7 +358,7 @@ class ComprehensiveModelEvaluator:
         plt.tight_layout()
         save_path = os.path.join(self.results_dir, 'roc_curves.png')
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✓ Saved: {save_path}")
+        print(f"[OK] Saved: {save_path}")
         plt.close()
         
         return roc_auc
@@ -456,8 +424,8 @@ class ComprehensiveModelEvaluator:
         report_lines.append(f"\n" + "="*80)
         report_lines.append("CONFUSION MATRIX (Counts)")
         report_lines.append("="*80)
-        report_lines.append("\nPredicted →")
-        header = "True ↓".ljust(15) + "  ".join([name[:8].ljust(8) for name in self.class_names])
+        report_lines.append("\nPredicted -->")
+        header = "True v".ljust(15) + "  ".join([name[:8].ljust(8) for name in self.class_names])
         report_lines.append(header)
         report_lines.append("-"*80)
         
@@ -474,7 +442,7 @@ class ComprehensiveModelEvaluator:
         text_path = os.path.join(self.results_dir, 'evaluation_report.txt')
         with open(text_path, 'w', encoding='utf-8') as f:
             f.write(report_text)
-        print(f"✓ Saved text report: {text_path}")
+        print(f"[OK] Saved text report: {text_path}")
         
         # Create JSON report
         json_report = {
@@ -510,9 +478,9 @@ class ComprehensiveModelEvaluator:
             })
         
         json_path = os.path.join(self.results_dir, 'evaluation_metrics.json')
-        with open(json_path, 'w') as f:
+        with open(json_path, 'w', encoding='utf-8') as f:
             json.dump(json_report, f, indent=4)
-        print(f"✓ Saved JSON metrics: {json_path}")
+        print(f"[OK] Saved JSON metrics: {json_path}")
         
         # Print summary to console
         print("\n" + "="*60)
@@ -557,7 +525,7 @@ def main():
     overall_accuracy = evaluator.evaluate(test_loader)
     
     # Generate visualizations
-    cm, cm_normalized = evaluator.plot_confusion_matrix()
+    cm = evaluator.plot_confusion_matrix()
     metrics_df = evaluator.plot_class_metrics()
     roc_auc = evaluator.plot_roc_curves()
     
@@ -565,15 +533,17 @@ def main():
     evaluator.generate_report(overall_accuracy, metrics_df, cm, roc_auc)
     
     print("\n" + "="*80)
-    print("✅ EVALUATION COMPLETE!")
+    print("[OK] EVALUATION COMPLETE!")
     print("="*80)
     print(f"\nResults saved to: {results_dir}")
     print("\nGenerated files:")
-    print("  ✓ confusion_matrix.png  - Confusion matrices (counts & normalized)")
-    print("  ✓ class_metrics.png     - Per-class precision, recall, F1-score")
-    print("  ✓ roc_curves.png        - ROC curves for all classes")
-    print("  ✓ evaluation_report.txt - Detailed text report")
-    print("  ✓ evaluation_metrics.json - Machine-readable metrics")
+    print("  [OK] confusion_matrix.png         - Confusion matrix (counts)")
+    print("  [OK] precision_recall_f1.png      - Per-class precision, recall, F1-score")
+    print("  [OK] f1_scores.png                - F1-scores by class")
+    print("  [OK] class_distribution.png       - Test set distribution")
+    print("  [OK] roc_curve_<classname>.png    - Individual ROC curves (9 files)")
+    print("  [OK] evaluation_report.txt        - Detailed text report")
+    print("  [OK] evaluation_metrics.json      - Machine-readable metrics")
     print("\n" + "="*80)
 
 if __name__ == "__main__":

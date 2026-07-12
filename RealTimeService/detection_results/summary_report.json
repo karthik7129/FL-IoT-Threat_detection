@@ -1,5 +1,5 @@
 {
-  "generation_time": "2025-09-26T23:29:50.212420",
+  "generation_time": "2025-12-16T11:51:59.297870",
   "files_processed": {
     "total": 10,
     "successful": 10,
@@ -7,25 +7,28 @@
     "success_rate": 100.0
   },
   "flow_analysis": {
-    "total_flows": 9000,
-    "malicious_flows": 9000,
+    "total_flows": 8098,
+    "malicious_flows": 8098,
     "benign_flows": 0,
     "malicious_percentage": 100.0
   },
   "attack_distribution": {
-    "Gafgyt Combo": 9000
+    "Mirai UDP": 4143,
+    "Mirai SYN": 1,
+    "Mirai ACK": 8,
+    "Gafgyt Combo": 3946
   },
   "threat_level_distribution": {
     "None": 0,
-    "Low": 9000,
-    "Medium": 0,
-    "High": 0,
+    "Low": 0,
+    "Medium": 3954,
+    "High": 4144,
     "Uncertain": 0
   },
   "performance": {
-    "average_processing_time": 0.5887158155441284,
-    "total_processing_time": 5.887158155441284,
-    "fastest_processing": 0.14783143997192383,
-    "slowest_processing": 3.5856456756591797
+    "average_processing_time": 0.4587193727493286,
+    "total_processing_time": 4.587193727493286,
+    "fastest_processing": 0.15959692001342773,
+    "slowest_processing": 2.356395721435547
   }
 }

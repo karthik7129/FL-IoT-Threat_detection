@@ -1,0 +1,113 @@
+{
+  "0": {
+    "attack_name": "Benign",
+    "samples": 100,
+    "correct": 0,
+    "accuracy": 0.0,
+    "predictions": {
+      "8": 91,
+      "1": 3,
+      "9": 4,
+      "5": 2
+    }
+  },
+  "1": {
+    "attack_name": "Gafgyt Combo",
+    "samples": 100,
+    "correct": 0,
+    "accuracy": 0.0,
+    "predictions": {
+      "8": 96,
+      "2": 4
+    }
+  },
+  "2": {
+    "attack_name": "Gafgyt Junk",
+    "samples": 100,
+    "correct": 4,
+    "accuracy": 4.0,
+    "predictions": {
+      "8": 92,
+      "2": 4,
+      "1": 4
+    }
+  },
+  "3": {
+    "attack_name": "Gafgyt TCP",
+    "samples": 100,
+    "correct": 0,
+    "accuracy": 0.0,
+    "predictions": {
+      "8": 100
+    }
+  },
+  "4": {
+    "attack_name": "Gafgyt UDP",
+    "samples": 100,
+    "correct": 0,
+    "accuracy": 0.0,
+    "predictions": {
+      "8": 100
+    }
+  },
+  "5": {
+    "attack_name": "Mirai ACK",
+    "samples": 100,
+    "correct": 2,
+    "accuracy": 2.0,
+    "predictions": {
+      "8": 94,
+      "9": 3,
+      "5": 2,
+      "2": 1
+    }
+  },
+  "6": {
+    "attack_name": "Mirai Scan",
+    "samples": 100,
+    "correct": 1,
+    "accuracy": 1.0,
+    "predictions": {
+      "8": 54,
+      "5": 1,
+      "7": 36,
+      "9": 8,
+      "6": 1
+    }
+  },
+  "7": {
+    "attack_name": "Mirai SYN",
+    "samples": 100,
+    "correct": 1,
+    "accuracy": 1.0,
+    "predictions": {
+      "8": 89,
+      "5": 1,
+      "1": 1,
+      "9": 6,
+      "6": 2,
+      "7": 1
+    }
+  },
+  "8": {
+    "attack_name": "Mirai UDP",
+    "samples": 100,
+    "correct": 96,
+    "accuracy": 96.0,
+    "predictions": {
+      "8": 96,
+      "5": 1,
+      "9": 3
+    }
+  },
+  "9": {
+    "attack_name": "Mirai UDPPlain",
+    "samples": 100,
+    "correct": 1,
+    "accuracy": 1.0,
+    "predictions": {
+      "8": 99,
+      "9": 1
+    }
+  }
+}
