@@ -6,35 +6,6 @@ A **Federated Learning-based IoT Threat Detection System** that uses distributed
 
 This project implements a federated learning framework for IoT threat detection using the N-BaIoT dataset. The system trains neural network models across multiple IoT devices without centralizing sensitive data, enabling collaborative threat detection while maintaining privacy.
 
-## Architecture
-
-```
-FL-IoT-Threat Detection/
-├── Core Components
-│   ├── server.py                    # Federated learning server (Flower)
-│   ├── client1.py                   # FL client for device 1
-│   ├── client2.py                   # FL client for device 2
-│   └── model.py                     # Neural network architecture
-├── Real-time Detection
-│   └── RealTimeService/
-│       ├── realtime_pipeline.py     # Real-time threat detection pipeline
-│       ├── threat_predictor.py      # ML-based threat prediction
-│       ├── feature_extractor.py     # Network feature extraction
-│       └── monitor.py               # Continuous monitoring service
-├── Analysis & Training
-│   ├── analysis.ipynb               # Data analysis and exploration
-│   ├── reduucedTrain.ipynb          # Training with reduced dataset
-│   ├── devicewise_analysis.ipynb    # Device-specific analysis
-│   └── federated_learning.py       # Custom FL implementation
-├── Data Simulation
-│   └── samplePackets/
-│       └── packet_simulator.py      # IoT traffic simulation
-└── Results & Models
-    ├── SavedGlobalModel/            # Trained federated models
-    ├── Results/                     # Performance metrics & plots
-    └── Logs/                        # Training and evaluation logs
-```
-
 ## Features
 
 ### **Federated Learning**
